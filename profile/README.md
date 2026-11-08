@@ -24,6 +24,6 @@ If you're building a Flow editor, use the [built-in Flow catalog](https://www.ve
 
 ## How the pieces fit
 
-A storefront, a register and an assistant can use the same shop. Commerce owns authoritative prices, inventory and orders. Checkout orchestrates the buyer journey. Apps and background workers extend what the shop can do. Agents can read within their grants and prepare changes for review. The checkout and merchant operations apply the same rules regardless of which interface initiated them.
+A storefront, a register and an assistant can use the same shop. Commerce owns authoritative prices, inventory and orders. Checkout orchestrates the buyer journey. After the order commits, a background worker picks up its Flow and saves progress in PostgreSQL. Apps and provider adapters can act on those events. Agents can read within their grants and prepare changes for review. [Flow job storage](https://www.veyndo.ai/docs/automation-component.html#durable-flow-job-storage).
 
 Start with the [architecture](https://www.veyndo.ai/docs/architecture.html) for the ownership boundaries, the [quick start](https://www.veyndo.ai/docs/quickstart.html) for a local shop, and the [issue tracker](https://github.com/veyndo/veyndo/issues) to discuss a reproducible problem or proposed change.
