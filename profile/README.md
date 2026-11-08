@@ -13,7 +13,7 @@ Veyndo is an AI-native commerce platform you can run as one shop or use in parts
 | [apps](https://github.com/veyndo/apps) | Run app logic in a bounded Wasm runtime or use the shared storage for records, settings and jobs. |
 | [marketplaces](https://github.com/veyndo/marketplaces) | Map products, sync listings and bring marketplace orders into a commerce host. |
 
-The [component map](https://www.veyndo.ai/docs/commerce-components.html) also covers Checkout, Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports, Payments and Experience. It distinguishes public repositories, access-controlled services and planned boundaries.
+The [component map](https://www.veyndo.ai/docs/one-shop-components.html) also covers Checkout, Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports, Payments and Experience. It distinguishes public repositories, access-controlled services and planned boundaries.
 
 ## How the pieces fit
 
