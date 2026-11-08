@@ -19,6 +19,8 @@ If you already have a storefront, follow the [Checkout browser example](https://
 
 If you are building an assistant, the [Knowledge component guide](https://www.veyndo.ai/docs/knowledge-component.html) shows how to search private sources with the SDK and verify a passage against its current revision.
 
+The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
+
 ## How the pieces fit
 
 A storefront, a register and an assistant can use the same shop. Commerce owns authoritative prices, inventory and orders. Checkout orchestrates the buyer journey. Apps and background workers extend what the shop can do. Agents can read within their grants and prepare changes for review. The checkout and merchant operations apply the same rules regardless of which interface initiated them.
