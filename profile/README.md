@@ -16,7 +16,7 @@ Veyndo is an AI-native commerce platform you can run as one shop or use in parts
 The [component map](https://www.veyndo.ai/docs/one-shop-components.html) also covers Checkout, Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports, Payments and Experience. It distinguishes public repositories, access-controlled services and planned boundaries.
 
 If you already have a storefront, follow the [Checkout browser example](https://www.veyndo.ai/docs/checkout-component.html#external-reference-storefront). It shows where the JavaScript SDK connects to Checkout and how the commerce host supplies the price, confirms the purchase and returns the original receipt.
-The [native and Storyfront guide](https://www.veyndo.ai/docs/checkout-component.html#how-native-and-embedded-checkout-share-one-order) traces both public entry points to the same Commerce order and explains how each recovers the purchase.
+The [Commerce host guide](https://www.veyndo.ai/docs/checkout-component.html#commerce-host-ports-in-core) explains the quote, confirmation and receipt calls. The [native and Storyfront guide](https://www.veyndo.ai/docs/checkout-component.html#how-native-and-embedded-checkout-share-one-order) traces both public entry points to the same Commerce order.
 
 If you are building an assistant, the [Knowledge component guide](https://www.veyndo.ai/docs/knowledge-component.html) shows how to search private sources with the SDK and verify a passage against its current revision.
 
