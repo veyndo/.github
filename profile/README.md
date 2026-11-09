@@ -20,7 +20,7 @@ If you already have a storefront, follow the [Checkout browser example](https://
 If you are building an assistant, the [Knowledge component guide](https://www.veyndo.ai/docs/knowledge-component.html) shows how to search private sources with the SDK and verify a passage against its current revision.
 
 The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
-If you're building a Flow editor, use the [built-in Flow catalog](https://www.veyndo.ai/docs/automation-component.html#built-in-flow-catalog) to read trigger and action names from HTTP, MCP or Rust. The connected shop supplies its installed apps and checks who can run each action.
+If you're building a Flow editor, read trigger and action names from the [built-in Flow catalog](https://www.veyndo.ai/docs/automation-component.html#built-in-flow-catalog). Then [check the draft through Core](https://www.veyndo.ai/docs/automation-component.html#check-a-flow-draft-before-saving) before saving. Your editor and Studio use the same rules and current shop permissions.
 
 ## How the pieces fit
 
