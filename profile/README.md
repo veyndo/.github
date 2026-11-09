@@ -22,6 +22,8 @@ If you are building an assistant, the [Knowledge component guide](https://www.ve
 The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
 If you're building a Flow editor, read trigger and action names from the [built-in Flow catalog](https://www.veyndo.ai/docs/automation-component.html#built-in-flow-catalog). Then [check the draft through Core](https://www.veyndo.ai/docs/automation-component.html#check-a-flow-draft-before-saving) before saving. Your editor and Studio use the same rules and current shop permissions.
 
+If you're connecting email, Slack or other providers, start with the [Connector guide](https://www.veyndo.ai/docs/connector-component.html). It explains how to keep an existing Veyndo installation on its current queue, or run the Connector with its own database and scoped HTTP and MCP access.
+
 ## How the pieces fit
 
 A storefront, a register and an assistant can use the same shop. Commerce owns authoritative prices, inventory and orders. Checkout orchestrates the buyer journey. After the order commits, a background worker picks up its Flow and saves progress in PostgreSQL. You can run that worker separately from the storefront API. It continues from the saved step after a restart. The handoff guide shows how to move app work out of Core while checkout keeps accepting orders. [Worker handoff](https://www.veyndo.ai/docs/automation-component.html#move-the-app-worker-out-of-core). Apps and provider adapters can act on those events, and agents prepare changes within their grants. [Flow worker and Rust contract](https://www.veyndo.ai/docs/automation-component.html#portable-flow-directives).
