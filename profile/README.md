@@ -18,7 +18,7 @@ The [component map](https://www.veyndo.ai/docs/one-shop-components.html) also co
 If you already have a storefront, follow the [Checkout browser example](https://www.veyndo.ai/docs/checkout-component.html#external-reference-storefront). It shows where the JavaScript SDK connects to Checkout and how the commerce host supplies the price, confirms the purchase and returns the original receipt.
 The [Commerce host guide](https://www.veyndo.ai/docs/checkout-component.html#commerce-host-ports-in-core) explains the quote, confirmation and receipt calls. The [native and Storyfront guide](https://www.veyndo.ai/docs/checkout-component.html#how-native-and-embedded-checkout-share-one-order) traces both public entry points to the same Commerce order.
 
-If you are building an assistant, the [Knowledge component guide](https://www.veyndo.ai/docs/knowledge-component.html) shows how to search private sources with the SDK and verify a passage against its current revision.
+Bring your own catalog or private documents to Knowledge. The [JavaScript example](https://github.com/veyndo/sdk#use-standalone-knowledge) imports a source, finds the right language and checks the passage against its current revision. It runs against the standalone service without a Veyndo shop.
 To keep an independent Knowledge database in sync with a Veyndo catalog, follow the [single-shop setup](https://www.veyndo.ai/docs/knowledge-component.html#use-core-as-the-identity-provider-for-one-live-shop). It uses existing scoped keys and queues catalog updates outside checkout.
 
 The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
