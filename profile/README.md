@@ -19,6 +19,7 @@ If you already have a storefront, follow the [Checkout browser example](https://
 The [Commerce host guide](https://www.veyndo.ai/docs/checkout-component.html#commerce-host-ports-in-core) explains the quote, confirmation and receipt calls. The [native and Storyfront guide](https://www.veyndo.ai/docs/checkout-component.html#how-native-and-embedded-checkout-share-one-order) traces both public entry points to the same Commerce order.
 
 If you are building an assistant, the [Knowledge component guide](https://www.veyndo.ai/docs/knowledge-component.html) shows how to search private sources with the SDK and verify a passage against its current revision.
+To keep an independent Knowledge database in sync with a Veyndo catalog, follow the [single-shop setup](https://www.veyndo.ai/docs/knowledge-component.html#use-core-as-the-identity-provider-for-one-live-shop). It uses existing scoped keys and queues catalog updates outside checkout.
 
 The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
 If you're building a Flow editor, read trigger and action names from the [built-in Flow catalog](https://www.veyndo.ai/docs/automation-component.html#built-in-flow-catalog). Then [check the draft through Core](https://www.veyndo.ai/docs/automation-component.html#check-a-flow-draft-before-saving) before saving. Your editor and Studio use the same rules and current shop permissions.
