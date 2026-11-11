@@ -1,39 +1,33 @@
 # Veyndo Commerce
 
-Veyndo is an AI-native commerce platform you can run as one shop or use in parts. Build a storefront, run the merchant workspace, and let agents work with the same catalogue, rules and approved operations your team uses.
+Run a shop or connect a component to the storefront you already have. Veyndo
+brings native checkout, merchant Studio, apps and agents onto one Rust commerce
+foundation.
 
-[Try Veyndo](https://start.veyndo.ai/) · [Read the handbook](https://www.veyndo.ai/docs/) · [Check the current status](https://www.veyndo.ai/docs/status.html)
+[Try a hosted shop](https://start.veyndo.ai/start) · [Run Veyndo locally](https://www.veyndo.ai/docs/first-tour.html) · [Handbook](https://www.veyndo.ai/docs/) · [Überblick auf Deutsch](https://www.veyndo.ai/docs/platform-overview.html)
 
-## Find your starting point
+[![A shopper reviews price and delivery beside the Product Guide in the hosted Lumen shop](https://raw.githubusercontent.com/veyndo/veyndo/1d824485a47d6c23eb46260c651f42c5d5df492f/docs/assets/apps/product-guide-cart-review-20261111.jpg)](https://www.veyndo.ai/docs/status.html#product-guide-actions-in-the-hosted-shop)
 
-| Repository | Start here if you want to… |
+## Public repositories
+
+| Repository | Start here to… |
 | --- | --- |
-| [veyndo](https://github.com/veyndo/veyndo) | Run the complete shop, merchant Studio and commerce API. |
-| [sdk](https://github.com/veyndo/sdk) | Call Veyndo and independently hosted components from JavaScript or TypeScript over HTTP and MCP. |
-| [apps](https://github.com/veyndo/apps) | Run app logic in a bounded Wasm runtime or use the shared storage for records, settings and jobs. |
-| [marketplaces](https://github.com/veyndo/marketplaces) | Map products, sync listings and bring marketplace orders into a commerce host. |
+| [Veyndo Commerce](https://github.com/veyndo/veyndo) | Run the storefront, merchant Studio and commerce API. |
+| [SDK](https://github.com/veyndo/sdk) | Connect a JavaScript or TypeScript app over HTTP and MCP. |
+| [Apps](https://github.com/veyndo/apps) | Run app logic with Wasm and use scoped records, settings and durable jobs. |
+| [Marketplaces](https://github.com/veyndo/marketplaces) | Sync listings and bring Amazon, eBay and Kaufland orders into a commerce host. |
 
-The [component map](https://www.veyndo.ai/docs/one-shop-components.html) also covers Checkout, Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports, Payments and Experience. It distinguishes public repositories, access-controlled services and planned boundaries.
+The [component map](https://www.veyndo.ai/docs/one-shop-components.html) covers Checkout,
+Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports,
+Payments and Experience. It includes the interfaces and access requirements.
 
-If you already have a storefront, follow the [Checkout browser example](https://www.veyndo.ai/docs/checkout-component.html#external-reference-storefront). It shows where the JavaScript SDK connects to Checkout and how the commerce host supplies the price, confirms the purchase and returns the original receipt.
-The [Commerce host guide](https://www.veyndo.ai/docs/checkout-component.html#commerce-host-ports-in-core) explains the quote, confirmation and receipt calls. The [native and Storyfront guide](https://www.veyndo.ai/docs/checkout-component.html#how-native-and-embedded-checkout-share-one-order) traces both public entry points to the same Commerce order.
+## Follow one workflow
 
-Bring your own catalog or private documents to Knowledge. The [JavaScript example](https://github.com/veyndo/sdk#use-standalone-knowledge) imports a source, finds the right language and checks the passage against its current revision. It runs against the standalone service without a Veyndo shop.
-To keep an independent Knowledge database in sync with a Veyndo catalog, follow the [single-shop setup](https://www.veyndo.ai/docs/knowledge-component.html#use-core-as-the-identity-provider-for-one-live-shop). It uses existing scoped keys and queues catalog updates outside checkout.
+- **Shopper.** The Product Guide shows app results inside the conversation. The shopper reviews native price and delivery before confirming a cart addition. [Try the Product Guide](https://www.veyndo.ai/docs/product-guide-mcp-app.html).
+- **Merchant.** Studio can read a private app note, propose a product edit and apply it after approval in a sandbox. [See the hosted check](https://www.veyndo.ai/docs/status.html#product-guide-actions-in-the-hosted-shop).
+- **Developer.** The Connected Shop example uses the SDK to read the catalog, open an interactive MCP App and complete a simulated purchase through independent Checkout. [Read and run the example](https://www.veyndo.ai/docs/checkout-component.html#external-reference-storefront).
 
-If you build an assistant, the [JavaScript SDK 0.4.1 prerelease](https://github.com/veyndo/sdk/releases/tag/v0.4.1) can discover and read a Veyndo MCP App. Start with the [Product Guide example](https://github.com/veyndo/sdk/blob/v0.4.1/docs/mcp-apps.md) to show a filterable card inside your own conversation UI. The shop still determines which views and actions the signed-in merchant or shopper can use. The [Connected Shop example](https://github.com/veyndo/sdk/tree/main/examples/connected-shop) puts the same kind of card next to catalog data and a complete simulated purchase through independent Checkout.
-
-The [installed Product Guide](https://www.veyndo.ai/docs/product-guide-mcp-app.html) uses a public care card and a separate private table for the merchant. Each view filters through its existing App tool and can pass the selection into the next chat draft. [Apps 0.29.1](https://github.com/veyndo/apps/releases/tag/v0.29.1) supplies the indexed field and choice definitions used by MCP, the SDK and both Veyndo agents. See the [hosted test](https://www.veyndo.ai/docs/status.html#product-guide-in-both-live-conversations) for the exact scope.
-
-The [Automation component guide](https://www.veyndo.ai/docs/automation-component.html) shows how to preview a rule from an external application and how that same evaluator fits into checkout and Flows.
-If you're building a Flow editor, read trigger and action names from the [built-in Flow catalog](https://www.veyndo.ai/docs/automation-component.html#built-in-flow-catalog). Then [check the draft through Core](https://www.veyndo.ai/docs/automation-component.html#check-a-flow-draft-before-saving) before saving. Your editor and Studio use the same rules and current shop permissions. The [typed validation result](https://www.veyndo.ai/docs/agentic-component-ui.html#typed-results-for-native-tools) reports the checked revision and confirms that the draft was not saved.
-
-If you're connecting email, Slack or other providers, start with the [Connector guide](https://www.veyndo.ai/docs/connector-component.html). It explains how to keep an existing Veyndo installation on its current queue, or run the Connector with its own database and scoped HTTP and MCP access.
-
-## How the pieces fit
-
-A storefront, a register and an assistant can use the same shop. Commerce owns authoritative prices, inventory and orders. Checkout orchestrates the buyer journey. After the order commits, a background worker picks up its Flow and saves progress in PostgreSQL. You can run that worker separately from the storefront API. It continues from the saved step after a restart. The handoff guide shows how to move app work out of Core while checkout keeps accepting orders. [Worker handoff](https://www.veyndo.ai/docs/automation-component.html#move-the-app-worker-out-of-core). Apps and provider adapters can act on those events, and agents prepare changes within their grants. [Flow worker and Rust contract](https://www.veyndo.ai/docs/automation-component.html#portable-flow-directives).
-
-Start with the [architecture](https://www.veyndo.ai/docs/architecture.html) for the ownership boundaries, the [quick start](https://www.veyndo.ai/docs/quickstart.html) for a local shop, and the [issue tracker](https://github.com/veyndo/veyndo/issues) to discuss a reproducible problem or proposed change.
-
-The hosted Lumen pilot connects eight running services. Its [version lock](https://github.com/veyndo/veyndo/blob/main/deploy/composition.lock.json) records the exact source commits, image digests, interface dependencies and database inputs. The [deployment guide](https://www.veyndo.ai/docs/cloud-releases.html#verify-the-hosted-lumen-composition) shows how to check those versions against Northflank. The [test results](https://www.veyndo.ai/docs/status.html#pinned-lumen-composition) explain which parts of the assembled shop have been verified.
+Native checkout and the original Storyfront use the same stock and order ledger.
+The Lumen pilot records the running versions of its eight services and the
+checks performed on them. [Release inventory](https://www.veyndo.ai/docs/components.json) ·
+[Current acceptance](https://www.veyndo.ai/docs/status.html) · [Source license](https://www.veyndo.ai/docs/licensing.html).
