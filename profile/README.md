@@ -1,35 +1,37 @@
-# Veyndo Commerce
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/veyndo-logo-dark.svg">
+  <img src="assets/veyndo-logo.svg" width="240" alt="Veyndo">
+</picture>
 
-Run a shop or connect a component to the storefront you already have. Veyndo
-brings native checkout, merchant Studio, apps and agents onto one Rust commerce
-foundation.
+# Build commerce with agents
 
-[Try a hosted shop](https://start.veyndo.ai/start) · [Run Veyndo locally](https://www.veyndo.ai/docs/first-tour.html) · [Handbook](https://www.veyndo.ai/docs/) · [Überblick auf Deutsch](https://www.veyndo.ai/docs/platform-overview.html)
+Veyndo Commerce is a Rust commerce platform for building shops, interactive
+shopping experiences and merchant workflows. Run the full shop or use its
+components in your own frontend, app or agent. Catalog, prices, inventory and
+orders share the same commerce core.
 
-[![A shopper reviews price and delivery beside the Product Guide in the hosted Lumen shop](https://raw.githubusercontent.com/veyndo/veyndo/1d824485a47d6c23eb46260c651f42c5d5df492f/docs/assets/apps/product-guide-cart-review-20261111.jpg)](https://www.veyndo.ai/docs/status.html#product-guide-actions-in-the-hosted-shop)
+**[Try the storefront](https://app.veyndo.ai/?shop=lumen-story-lab-15-o-98aa4751fa&lang=en-GB)** · [Run it locally](https://www.veyndo.ai/docs/quickstart.html) · [Build with the SDK](https://github.com/veyndo/sdk)
 
-## Public repositories
+[![Nord Atelier storefront with the Harbor Wool Coat and an entry point to the shopping assistant](assets/nord-atelier.jpg)](https://www.veyndo.ai/docs/fashion-demo.html)
 
-| Repository | Start here to… |
+*Nord Atelier, a Veyndo demo shop. Browse the collection, ask for a recommendation and try the checkout.*
+
+## Find the right repository
+
+| Repository | What you can build |
 | --- | --- |
-| [Veyndo Commerce](https://github.com/veyndo/veyndo) | Run the storefront, merchant Studio and commerce API. |
-| [SDK](https://github.com/veyndo/sdk) | Connect a JavaScript or TypeScript app over HTTP and MCP. SDK 0.4.15 includes the A2UI workspace adapter. |
-| [Apps](https://github.com/veyndo/apps) | Run app logic with Wasm and use scoped records, settings and durable jobs. |
-| [Marketplaces](https://github.com/veyndo/marketplaces) | Sync listings and bring Amazon, eBay and Kaufland orders into a commerce host. |
+| [Veyndo Commerce](https://github.com/veyndo/veyndo) | Run the shop, design the storefront in Studio and automate merchant workflows. |
+| [SDK](https://github.com/veyndo/sdk) | Connect a JavaScript or TypeScript frontend to the hosted API. Read the catalog, submit a reviewed order and embed interactive MCP Apps. |
+| [Apps](https://github.com/veyndo/apps) | Extend commerce with isolated Wasm logic, versioned app definitions, scoped data and background jobs. |
+| [Marketplaces](https://github.com/veyndo/marketplaces) | Connect marketplace listings and import orders from Amazon, eBay and Kaufland. |
 
-The [component map](https://www.veyndo.ai/docs/one-shop-components.html) covers Checkout,
-Knowledge, Automation, Connectors, EDI, Migration, POS, Shipping, Reports,
-Payments and Experience. It includes the interfaces and access requirements.
+## See how it fits together
 
-## Follow one workflow
+- **For shoppers.** Open an interactive product guide in the conversation, review price and delivery, and add the selected item to the cart. [Try the Product Guide](https://www.veyndo.ai/docs/product-guide-mcp-app.html)
+- **For merchants.** Open a product, order or customer view from the Studio agent and review a proposed change in a private workspace. [See agentic Studio](https://www.veyndo.ai/docs/agentic-component-ui.html#open-an-a2ui-working-view-in-studio)
+- **For developers.** Run a separate storefront that combines the catalog, an interactive app and a simulated purchase through Checkout. [Run the Connected Shop example](https://github.com/veyndo/sdk/tree/main/examples/connected-shop)
 
-- **Shopper.** The Product Guide shows app results inside the conversation. The shopper reviews native price and delivery before confirming a cart addition. [Try the Product Guide](https://www.veyndo.ai/docs/product-guide-mcp-app.html).
-- **Merchant.** Studio can open a product, order or customer working view with A2UI. A merchant can also review and apply a Product Guide proposal in a sandbox. [Open the Studio guide](https://www.veyndo.ai/docs/agentic-component-ui.html#open-an-a2ui-working-view-in-studio).
-- **Developer.** The Connected Shop example uses the SDK to read the catalog, open an interactive MCP App and complete a simulated purchase through independent Checkout. [Read and run the example](https://www.veyndo.ai/docs/checkout-component.html#external-reference-storefront).
+Veyndo is a source-available prototype. The component map explains how the services
+fit together. The status page records which flows have been verified.
 
-Native checkout and the original Storyfront use the same stock and order ledger.
-The Lumen pilot records the running versions of its eight services and the
-checks performed on them. Native and Storyfront purchases returned to empty carts
-and were refunded in PayPal Sandbox. The hosted path from the same paid order
-through invoice and delivered mail is still open. [Release inventory](https://www.veyndo.ai/docs/components.json) ·
-[Current acceptance](https://www.veyndo.ai/docs/status.html#platform-at-a-glance) · [Source license](https://www.veyndo.ai/docs/licensing.html).
+[Component map](https://www.veyndo.ai/docs/one-shop-components.html) · [Handbook](https://www.veyndo.ai/docs/) · [Current status](https://www.veyndo.ai/docs/status.html) · [Licensing](https://www.veyndo.ai/docs/licensing.html) · [Überblick auf Deutsch](https://www.veyndo.ai/docs/platform-overview.html)
